@@ -1,0 +1,9 @@
+baseURL = 'www.hellofriend.studio'
+languageCode = 'en-us'
+title = 'hello friend'
+theme = 'hugo-theme-hello-friend-ng'
+
+[params]
+    backgroundImage = 'background.jpg'
+
+    enableThemeToggle = false
