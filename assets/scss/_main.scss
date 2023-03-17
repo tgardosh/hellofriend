@@ -1,7 +1,5 @@
 html {
   box-sizing: border-box;
-  line-height: 1.6;
-  letter-spacing: 0.06em;
   scroll-behavior: smooth;
 }
 
@@ -10,6 +8,7 @@ html {
 *:after {
   box-sizing: inherit;
 }
+
 
 // SVG
 #face {
@@ -26,20 +25,22 @@ html {
 }
 
 #face svg:hover {
-  transform: rotate(-180);
+  fill:#0ff;
+  transform: rotate(180deg);
+}
+
+
+// Email
+.email {
+  font-weight:600;
+  color: #0ff;
+  animation: hue 10s infinite;
 }
 
 @keyframes hue {
   to {
     filter: hue-rotate(-360deg);
   }
-}
-
-
-// Email
-#email {
-  color: #f00;
-  animation: hue 10s infinite;
 }
 
 // Fonts
@@ -52,17 +53,19 @@ body {
   font-family: 'Roboto Mono', Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
   font-display: auto;
   color: $dark-color;
-  font-size: .8rem;
-  line-height: 1.5;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  font-feature-settings: "liga", "tnum", "case", "calt", "zero", "ss01", "locl";
+  font-size: 0.9em;
+  font-weight: 400;
+  line-height: 1.75em;
+  letter-spacing: 0.1em;
   -webkit-overflow-scrolling: touch;
   -webkit-text-size-adjust: 100%;
-
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+
+ ::selection{
+    background-color:#f00;
+  }
 
   // Default
   background-color: $dark-background;
